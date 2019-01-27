@@ -1,0 +1,6 @@
+<div>
+  <h1>Your devs</h1>
+  <a class="button" routerLink="/developer/add">Add developer</a>
+  <app-developer-table [data]="developerService.list | async" (removeDeveloper)="onRemoveDeveloper($event)"></app-developer-table>
+  <a class="button" (click)="developerService.loadDevelopers()">Refresh</a>
+</div>

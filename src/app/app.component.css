@@ -3,6 +3,10 @@
     height: 100%;
 }
 
+.content {
+    flex-grow: 1;
+}
+
 .menu {
     width: 200px;
     border: 1px solid #34aedc;
@@ -19,9 +23,18 @@
 }
 
 .menu ul li {
-    margin: 0.2em 0 0 0;
+    margin: 0;
     border-bottom: 3px solid transparent;
     transition: color 0.2s, background-color 0.2s, padding 0.8s;
+}
+
+.menu ul li.segment, .menu ul li.segment:hover {
+    font-style: italic;
+    margin: 1.5em 0 0 0.1em;
+    padding: 0;
+    background-color: inherit;
+    color: inherit;
+    border-bottom: 1px solid #dadada;
 }
 
 .menu ul li a {

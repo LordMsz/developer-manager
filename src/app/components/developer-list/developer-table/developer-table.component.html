@@ -1,0 +1,14 @@
+<div>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let dev of data">
+      <td>{{dev.id}}</td>
+      <td>{{dev.name}}</td>
+      <td><button (click)="remove(dev.id)">X</button></td>
+    </tr>
+  </table>
+</div>
