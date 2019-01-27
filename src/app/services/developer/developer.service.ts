@@ -28,7 +28,7 @@ export class DeveloperService implements Resolve<any> {
   }
 
   public loadDevelopers(): void {
-    this.developers = JSON.parse(window.localStorage.getItem(DeveloperService.LOCAL_STORAGE_DEVELOPERS_KEY));
+    this.developers = JSON.parse(window.localStorage.getItem(DeveloperService.LOCAL_STORAGE_DEVELOPERS_KEY)) || [];
     this.developersSubject.next(this.developers);
   }
 
